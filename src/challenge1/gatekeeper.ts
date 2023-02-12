@@ -8,6 +8,6 @@ export abstract class Gatekeeper<ResponseType> {
   protected abstract guess(word: string): ResponseType;
 
   protected logWord(word: string, text: string): void {
-    console.log(`${word} is ${text}`);
+    console.log(`"${word}" is ${text}.`);
   }
 }
