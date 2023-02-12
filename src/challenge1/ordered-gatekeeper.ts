@@ -6,11 +6,11 @@ export class OrderedGatekeeper extends Gatekeeper<AskResponse> {
   counter = 0;
   readonly limit = 20;
 
-  ask(word: string) {
+  guess(word: string) {
     this.counter += 1;
 
     if (this.counter > this.limit) {
-      throw new Error(`You've already asked ${this.limit} times; YOU LOSE!`);
+      throw new Error(`You've already guessed ${this.limit} times; YOU LOSE!`);
     }
 
     if (this.word === word) {
