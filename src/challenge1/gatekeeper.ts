@@ -15,3 +15,6 @@ export const getAsk = (word: string): AskFunc => {
     return word === guessedWord;
   };
 }
+
+export const getAskForRandomWord = (words: string[]): AskFunc =>
+  getAsk(words[Math.floor(Math.random() * words.length)]);

@@ -1,6 +1,6 @@
-import { getAsk } from './gatekeeper';
+import { getAsk, getAskForRandomWord } from './gatekeeper';
 
-describe('ask', () => {
+describe('getAsk', () => {
   it('returns true for the correct word', () => {
     const ask = getAsk('banana');
 
@@ -21,5 +21,23 @@ describe('ask', () => {
     }
 
     expect(() => ask('banana')).toThrow("You've already asked 20 times; you lose!");
+  });
+});
+
+describe('getAskForRandomWord', () => {
+  beforeEach(() => {
+    jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
+  });
+
+  afterEach(() => {
+    jest.spyOn(global.Math, 'random').mockRestore();
+  });
+
+  it('gives an ask function for a randomly-chosen word', () => {
+    const words = ['apple', 'pear', 'banana']
+    const ask = getAskForRandomWord(words);
+
+    expect(ask('pear')).toBe(true);
+    expect(ask('banana')).toBe(false);
   });
 });
