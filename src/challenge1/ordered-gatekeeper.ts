@@ -11,5 +11,5 @@ export class OrderedGatekeeper extends Gatekeeper<AskResponse> {
       return 'after';
     }
     return 'before';
-  };
+  }
 }

@@ -17,9 +17,12 @@ export abstract class Gatekeeper<ResponseType> {
     this.counter += 1;
 
     return this.getResponse(word);
-  };
+  }
 }
 
-export function gatekeeperForRandomWord<ResponseType>(cls: new (word: string) => Gatekeeper<ResponseType>, words: string[]) {
+export function gatekeeperForRandomWord<ResponseType>(
+  cls: new (word: string) => Gatekeeper<ResponseType>,
+  words: string[],
+) {
   return new cls(words[Math.floor(Math.random() * words.length)]);
 }

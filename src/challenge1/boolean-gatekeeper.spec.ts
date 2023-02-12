@@ -20,6 +20,8 @@ describe('BooleanGatekeeper', () => {
       keeper.ask('peach');
     }
 
-    expect(() => keeper.ask('banana')).toThrow("You've already asked 20 times; you lose!");
+    expect(() => keeper.ask('banana')).toThrow(
+      "You've already asked 20 times; you lose!",
+    );
   });
 });

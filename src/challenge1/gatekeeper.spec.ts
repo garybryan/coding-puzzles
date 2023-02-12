@@ -1,7 +1,6 @@
 import { gatekeeperForRandomWord } from './gatekeeper';
 import { BooleanGatekeeper } from './boolean-gatekeeper';
 
-
 describe('gatekeeperForRandomWord', () => {
   beforeEach(() => {
     jest.spyOn(global.Math, 'random').mockReturnValue(0.5);
@@ -11,8 +10,8 @@ describe('gatekeeperForRandomWord', () => {
     jest.spyOn(global.Math, 'random').mockRestore();
   });
 
-  it('gives an ask function for a randomly-chosen word', () => {
-    const words = ['apple', 'pear', 'banana']
+  it('returns a gatekeeper for a randomly-chosen word', () => {
+    const words = ['apple', 'pear', 'banana'];
     const keeper = gatekeeperForRandomWord(BooleanGatekeeper, words);
 
     expect(keeper.ask('pear')).toBe(true);
