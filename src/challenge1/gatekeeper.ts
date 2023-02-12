@@ -1,27 +1,25 @@
-type AskResponse = 'before' | 'after' | 'correct';
-type AskFunc = (guessedWord: string) => AskResponse
+export abstract class Gatekeeper<ResponseType> {
+  counter = 0;
+  readonly limit = 20;
+  readonly word: string;
 
-const LIMIT = 20
+  constructor(word: string) {
+    this.word = word;
+  }
 
-export const getAsk = (word: string): AskFunc => {
-  let counter = 0;
+  protected abstract getResponse(word: string): ResponseType;
 
-  return (guessedWord) => {
-    if (counter >= LIMIT) {
-      throw new Error(`You've already asked ${LIMIT} times; you lose!`);
+  ask(word: string): ResponseType {
+    if (this.counter >= this.limit) {
+      throw new Error(`You've already asked ${this.limit} times; you lose!`);
     }
 
-    counter += 1;
+    this.counter += 1;
 
-    if (word === guessedWord) {
-      return 'correct';
-    }
-    if (word > guessedWord) {
-      return 'after';
-    }
-    return 'before';
+    return this.getResponse(word);
   };
 }
 
-export const getAskForRandomWord = (words: string[]): AskFunc =>
-  getAsk(words[Math.floor(Math.random() * words.length)]);
+export function gatekeeperForRandomWord<ResponseType>(cls: new (word: string) => Gatekeeper<ResponseType>, words: string[]) {
+  return new cls(words[Math.floor(Math.random() * words.length)]);
+}
