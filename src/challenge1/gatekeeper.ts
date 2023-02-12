@@ -1,4 +1,5 @@
-type AskFunc = (guessedWord: string) => boolean
+type AskResponse = 'before' | 'after' | 'correct';
+type AskFunc = (guessedWord: string) => AskResponse
 
 const LIMIT = 20
 
@@ -12,7 +13,13 @@ export const getAsk = (word: string): AskFunc => {
 
     counter += 1;
 
-    return word === guessedWord;
+    if (word === guessedWord) {
+      return 'correct';
+    }
+    if (word > guessedWord) {
+      return 'after';
+    }
+    return 'before';
   };
 }
 

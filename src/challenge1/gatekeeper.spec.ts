@@ -4,13 +4,19 @@ describe('getAsk', () => {
   it('returns true for the correct word', () => {
     const ask = getAsk('banana');
 
-    expect(ask('banana')).toBe(true);
+    expect(ask('banana')).toBe('correct');
   });
 
-  it('returns false for an incorrect word', () => {
+  it('returns before when the correct word comes before the guess', () => {
     const ask = getAsk('banana');
 
-    expect(ask('pineapple')).toBe(false);
+    expect(ask('pineapple')).toBe('before');
+  });
+
+  it('returns after when the correct word comes after the guess', () => {
+    const ask = getAsk('banana');
+
+    expect(ask('apple')).toBe('after');
   });
 
   it('throws an error when guessing over 20 times', () => {
@@ -37,7 +43,7 @@ describe('getAskForRandomWord', () => {
     const words = ['apple', 'pear', 'banana']
     const ask = getAskForRandomWord(words);
 
-    expect(ask('pear')).toBe(true);
-    expect(ask('banana')).toBe(false);
+    expect(ask('pear')).toBe('correct');
+    expect(ask('banana')).toBe('after');
   });
 });
