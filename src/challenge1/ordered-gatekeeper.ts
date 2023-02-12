@@ -3,13 +3,25 @@ import { Gatekeeper } from './gatekeeper';
 type AskResponse = 'before' | 'after' | 'correct';
 
 export class OrderedGatekeeper extends Gatekeeper<AskResponse> {
-  getResponse(word: string) {
+  counter = 0;
+  readonly limit = 20;
+
+  ask(word: string) {
+    this.counter += 1;
+
+    if (this.counter > this.limit) {
+      throw new Error(`You've already asked ${this.limit} times; YOU LOSE!`);
+    }
+
     if (this.word === word) {
+      this.logWord(word, 'CORRECT');
       return 'correct';
     }
     if (this.word > word) {
+      this.logWord(word, 'WRONG; the correct word comes AFTER it.');
       return 'after';
     }
+    this.logWord(word, 'WRONG; the correct word comes BEFORE it.');
     return 'before';
   }
 }
