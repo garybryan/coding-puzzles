@@ -31,7 +31,8 @@ export class OrderedGatekeeper extends Gatekeeper<Response> {
       const remaining = this.limit - this.counter;
       this.logWord(
         word,
-        `WRONG; the correct word comes ${result.toUpperCase()} it. You have ${remaining} more guess${remaining === 1 ? '' : 'es'
+        `WRONG; the correct word comes ${result.toUpperCase()} it. You have ${remaining} more guess${
+          remaining === 1 ? '' : 'es'
         }`,
       );
     }

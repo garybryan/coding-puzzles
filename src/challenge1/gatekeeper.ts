@@ -10,7 +10,7 @@ export abstract class Gatekeeper<ResponseType> {
 
   async guess(word: string): Promise<ResponseType> {
     function timeout(ms: number): Promise<void> {
-      return new Promise(resolve => setTimeout(resolve, ms));
+      return new Promise((resolve) => setTimeout(resolve, ms));
     }
     await timeout(1000);
     return this.getResponse(word);
