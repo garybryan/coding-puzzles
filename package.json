@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@marp-team/marp-cli": "^2.3.0",
     "@types/jest": "^29.4.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
     "@typescript-eslint/parser": "^5.51.0",
@@ -17,7 +18,9 @@
     "typescript": "^4.9.5"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build-slides": "marp slides/slides.md -o slides/slides.html",
+    "slides": "npm run build-slides && open slides/slides.html"
   },
   "author": "Gary Bryan",
   "license": "ISC"
