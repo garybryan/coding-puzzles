@@ -1,6 +1,6 @@
 export abstract class Gatekeeper<ResponseType> {
   readonly word: string;
-  readonly delay = 1000;
+  readonly delay = 300;
 
   constructor(word: string) {
     this.word = word;
@@ -9,10 +9,8 @@ export abstract class Gatekeeper<ResponseType> {
   protected abstract getResponse(word: string): ResponseType;
 
   async guess(word: string): Promise<ResponseType> {
-    function timeout(ms: number): Promise<void> {
-      return new Promise((resolve) => setTimeout(resolve, ms));
-    }
-    await timeout(1000);
+    await new Promise((resolve) => setTimeout(resolve, this.delay));
+
     return this.getResponse(word);
   }
 

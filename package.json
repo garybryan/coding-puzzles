@@ -19,6 +19,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch --verbose=true",
     "build-slides": "marp slides/slides.md -o slides/slides.html",
     "slides": "npm run build-slides && open slides/slides.html"
   },

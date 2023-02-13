@@ -1,6 +1,6 @@
 import { Gatekeeper } from './gatekeeper';
 
-type Response = 'before' | 'after' | 'correct';
+export type Response = 'before' | 'after' | 'correct';
 
 export class OrderedGatekeeper extends Gatekeeper<Response> {
   counter = 0;
