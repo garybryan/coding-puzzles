@@ -1,7 +1,7 @@
 import { BooleanGatekeeper } from './boolean-gatekeeper';
 import { PASSWORD } from './top-secret';
 import { dictionary } from './dictionary';
-import { findPassword } from '.';
+import { findPassword } from './part1';
 
 jest.setTimeout(500000);
 
