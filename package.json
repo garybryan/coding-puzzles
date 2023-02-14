@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "@datastructures-js/queue": "^4.2.3",
     "@marp-team/marp-cli": "^2.3.0",
     "@types/jest": "^29.4.0",
     "@typescript-eslint/eslint-plugin": "^5.51.0",
