@@ -209,7 +209,7 @@ The money we can make from a client depends on its _number of employees_.
 
 Imagine that our _salesperson_ can acquire **one new client per month**.
 
-And we charge a one-off fee of **$1000 per employee**.
+And we charge a one-off fee of **$500 per employee**.
 
 How much **money could we make** in **24 months**?
 
@@ -217,7 +217,7 @@ Perhaps it pays to _be greedy_...
 
 ---
 
-# Maximum money (Easy mode)
+# Maximum money: Easy mode
 
 We are given _one input_:
 
@@ -240,7 +240,7 @@ Our busy salesperson can only negotiate with _one client at a time_.
 
 ---
 
-# Maximum money (Normal mode)
+# Maximum money: Normal mode
 
 We are given _two inputs_:
 
@@ -259,13 +259,13 @@ And do it _efficiently_. We need to be _quick_!
 
 But could we do better with a _monthly subscription model_?
 
-Market research shows we can charge **$100 per employee per month**.
+Market research shows we can charge **$50 per employee per month**.
 
 _How much could we make this way?_
 
 ---
 
-# Maximum money (Hard mode)
+# Maximum money: (NP-)Hard mode
 
 We are given _two inputs_:
 
@@ -276,7 +276,7 @@ We are given _two inputs_:
 
 Give the **maximum amount we can make** in **24 months** with **monthly subscriptions**.
 
-Your code should ~~_be efficient_.~~ at least _not take all day_.
+Your code should _~~be efficient.~~ at least not take all day_.
 
 ---
 
@@ -321,7 +321,7 @@ But if we want the skills, we gotta **pay for them**!
 
 ---
 
-# Maximum money (Silly mode)
+# Maximum money: Silly mode
 
 We are given _two inputs_, just like before:
 
