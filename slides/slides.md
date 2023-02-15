@@ -16,39 +16,47 @@ class: invert
 
 # Coding Challenges
 
+Gary Bryan
+
 ---
 
-# Setting the scene
+# The startup
 
 We've all left our _cushy bank jobs_...
 
-To start a _business-to-business Software as a Service_ startup!
+To start a _business-to-business Software as a Service_ company!
 
-But we need to **get funded** and **find some clients**.
+But we need to **get funded**.
+
+And **find some clients**.
+
+![bg left:50%](images/leaving.jpeg)
 
 ---
 
-# An exclusive party
+# An exclusive event
 
-We've got wind of an **exclusive IPO party** tonight.
+We've got wind of an **IPO party** tonight.
 
 All of the Valley's _VIP investors_ will be there.
 
 We just need to **get in**...
 
-![bg right:50%](images/party.webp)
+![bg right:45%](images/party.webp)
 
 ---
 
 # The password
 
-The bouncer will only let us in if we know the **password**.
+The bouncer asks us for the **password**.
 
-But he's a nice guy really! He wants to _help a new business_.
+But he's a nice guy really!
 
-So he gives us a _hint_ about the password...
+He wants to _help a new business_.
 
-![bg left:30%](images/bouncer.png)
+So he gives us a **hint**...
+
+![bg left:40%](images/bouncer.png)
 
 ---
 
@@ -58,11 +66,11 @@ So he gives us a _hint_ about the password...
 
 The password is an **English word**!
 
-Luckily, you're carrying a _dictionary_ around.
+Luckily, you're carrying a **dictionary** around.
 
-![bg right:40%](images/dictionary.jpeg)
+![bg right:45%](images/dictionary.jpeg)
 
-As one does at a party.
+As you do at a _party_.
 
 ---
 
@@ -71,15 +79,15 @@ As one does at a party.
 Given _two inputs_:
 
 - `guess(word: string): Promise<boolean>`
-  A _function_ that takes a **word** and returns `true` or `false`.
+  A **function** that takes a **word** and returns to `true` or `false`.
 - `dictionary: string[]`
-  An _array_ of just over 370,000 **English words**.
+  An **array** of just over 370,000 **English words**.
 
 **Find the password**.
 
 ---
 
-# The bottleneck
+# A bottleneck
 
 The bouncer may be nice, but he has _limits_.
 
@@ -97,9 +105,15 @@ And they're getting **impatient**...
 
 You only have enough time to guess **20 words**.
 
-But he still wants to _help us_, so he'll make things a little _easier_...
+But the bouncer still wants to _help_.
 
-"This time, if you guess incorrectly, I'll tell you whether the password comes **before** or **after** the word you just guessed, in **alphabetical order**."
+So he'll make things a little **easier**:
+
+> This time, if you guess **incorrectly**,  
+> I'll tell you whether the password comes **before** or **after** the word you guessed,
+> in **alphabetical order**."
+
+![bg right:40%](images/questions.jpeg)
 
 ---
 
@@ -108,12 +122,12 @@ But he still wants to _help us_, so he'll make things a little _easier_...
 Similarly to before, we are given _two inputs_:
 
 - `guess(word: string): Promise<'correct' | 'before' | 'after'>`
-  A _function_ that takes a **word** and returns:
+  A **function** that takes a **word** and returns:
   - `'correct'` if the word is correct;
-  - `'after'` if the password comes _after_ the guessed word;
-  - `'before'` if the password comes _before_ it.
+  - `'after'` if the real password comes _after_ the guessed word;
+  - `'before'` if the real password comes _before_ it.
 - `dictionary: string[]`
-  An _array_ of just over 370,000 **English words**.
+  An **array** of just over 370,000 **English words**.
 
 Find the password in **no more than 20 guesses**.
 
@@ -121,19 +135,21 @@ Find the password in **no more than 20 guesses**.
 
 # The Social Network
 
-We've spotted a famous venture capitalist:
+We're in!
+
+And we've spotted a famous _venture capitalist_:
 
 **Monica Hall**!
 
-Let's _talk to her_.
+Let's **talk to her**.
 
 But Monica doesn't talk to _just anyone_.
 
-And besides, we're _socially-awkward engineers_.
+And besides, we're _awkward engineers_.
 
 We don't talk to **strangers**...
 
-![bg right:40%](images/monica.jpeg)
+![bg right:42%](images/monica.jpeg)
 
 ---
 
@@ -149,13 +165,13 @@ Could we reach her via **mutual friends**?
 
 ---
 
-# An introduction
+# Have you met my friend?
 
-Find the smallest _degree of separation_, via other guests, between you and Monica.
+Find the **lowest degree of separation**, via other guests, between you and Monica.
 
-So if she were a _friend of a friend of a friend_, the degree would be **3**.
+If she were a _friend of a friend of a friend_, the degree would be **3**.
 
-Assume that friendships are _bidirectional_:
+Assume that friendships are **bidirectional**:
 
 > "If you're my friend, then I'm your friend".
 
@@ -166,10 +182,10 @@ Assume that friendships are _bidirectional_:
 Given _one input_:
 
 - `getFriends(name: string): string[]`
-  A _function_ that takes **a person's name**,  
-  and returns an _array_ of names of their **friends** at the party.
+  A **function** that takes **a person's name**,  
+  and returns an **array** of names of that person's **friends** at the party.
 
-Calling `getFriends('Me')` returns _your friends_. That's a start!
+`getFriends('Me')` returns **your friends' names**. That's a start!
 
 Find the **minimum degree of separation**.
 
@@ -183,15 +199,28 @@ But we're bad at **remembering names**.
 
 We've _forgotten_ those mutual friends' ones already!
 
-Modify the solution to return **an array of names** of the people on the shortest path, in order of connection.
+We need to **keep track** of them better.
 
 ![bg right:30%](images/names.webp)
 
 ---
 
+# The challenge
+
+Given _one input_:
+
+- `getFriends(name: string): string[]`
+  A **function** that takes **a person's name**,  
+  and returns an **array** of names of that person's **friends** at the party.
+
+Modify the previous solution to return **an array of names** representing the
+**shortest path** from you to Monica.
+
+---
+
 # Success!
 
-Monica liked our idea and has promised us a _seed round!_.
+Monica liked our idea and has offered us a **seed round**!
 
 _We should talk to drunk VCs more often..._
 
@@ -199,11 +228,11 @@ But it barely covers our _initial costs_.
 
 We'd better **become profitable** quickly!
 
-![bg left:30%](images/funding.jpeg)
+![bg left:33%](images/funding.jpeg)
 
 ---
 
-# Our mission
+# Mission statement
 
 <style>
 img[alt~="center"] {
@@ -214,7 +243,7 @@ img[alt~="center"] {
 
 ![height:350px center](images/mission.png)
 
-How can we _make as much money as we can?_
+How can we make _as much money as we can_?
 
 We need a **business plan**.
 
@@ -226,7 +255,9 @@ We've done our _networking_.
 
 We've found **40 potential clients**.
 
-The money we can make from a company depends on its _number of employees_.
+The amount we can make from a company depends on its **size**.
+
+**More employees** means **more money**!
 
 ![bg left:45%](images/networking.jpeg)
 
@@ -234,11 +265,11 @@ The money we can make from a company depends on its _number of employees_.
 
 # A plan!
 
-Imagine that our **salesperson** can acquire **one new client per month**.
+Our **sales rep** can acquire **one new client per month**.
 
 And we charge a one-off fee of **$500 per employee**.
 
-How much can we make in **24 months**?
+How much could we make in **24 months**?
 
 Perhaps it pays to _be greedy_...
 
@@ -251,7 +282,7 @@ Perhaps it pays to _be greedy_...
 Given _one input_:
 
 - `employees: number[]`
-  An _array_ of numbers of employees per company.
+  An **array** of numbers of employees per company.
 
 Give the **maximum amount** we can make in **24 months**.
 
@@ -263,7 +294,7 @@ But if life were that simple, _we'd all be millionaires_...
 
 In reality, some companies are _difficult_.
 
-Convincing them could take **more than a month**.
+Convincing them takes **more than a month**.
 
 Our busy salesperson can only negotiate with **one company at a time**.
 
@@ -276,10 +307,10 @@ Our busy salesperson can only negotiate with **one company at a time**.
 Given _two inputs_:
 
 - `employees: number[]`
-  An _array_ of numbers of employees per company.
+  An **array** of numbers of employees per company.
 - `months: number[]`
-  An _array_ of the numbers of months required to make a sale to each company.  
-  (_Whole numbers_)
+  An **array** of the numbers of months required to make a sale to each company.  
+  (**Whole numbers**)
 
 Give the **maximum amount we can make** in **24 months**.
 
@@ -304,10 +335,9 @@ _How much could we make this way?_
 Given _two inputs_:
 
 - `employees: number[]`
-  An _array_ of numbers of employees per company.
+  An **array** of numbers of employees per company.
 - `months: number[]`
-  An _array_ of the numbers of months required to make a sale to each company.  
-  (_Whole numbers_)
+  An **array** of the numbers of months required to make a sale to each company.
 
 Give the **maximum amount** we can make in **24 months** with **monthly subscriptions**.
 
@@ -347,9 +377,9 @@ We can hire _as many as we need and can afford_.
 Given _two inputs_, just like before:
 
 - `employees: number[]`
-  An _array_ of numbers of employees per company.
+  An **array** of numbers of employees per company.
 - `months: number[]`
-  An _array_ of the numbers of months required to make a sale to each company.
+  An **array** of the numbers of months required to make a sale to each company.
 
 Give the **maximum amount** we can make in **24 months** with **monthly subscriptions** and the ability to **hire salespeople**?
 
