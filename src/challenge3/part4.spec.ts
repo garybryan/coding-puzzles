@@ -5,7 +5,7 @@ import { MAX_4 } from './top-secret';
 jest.setTimeout(20000);
 
 describe('Maximum Money part 4', () => {
-  it.skip('Finds the maximum possible income with monthly subscriptions and hiring salespeople', () => {
+  it('Finds the maximum possible income with monthly subscriptions and hiring salespeople', () => {
     expect(maxMoney(employees, months)).toBe(MAX_4);
   });
 });

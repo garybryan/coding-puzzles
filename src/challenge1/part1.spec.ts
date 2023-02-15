@@ -3,10 +3,10 @@ import { PASSWORD } from './top-secret';
 import { dictionary } from './dictionary';
 import { findPassword } from './part1';
 
-jest.setTimeout(500000);
+jest.setTimeout(15000);
 
 describe('Challenge 1', () => {
-  it.skip('finds the password', async () => {
+  it('finds the password', async () => {
     const booleanGatekeeper = new BooleanGatekeeper(PASSWORD);
 
     expect(

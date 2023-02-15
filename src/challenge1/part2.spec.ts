@@ -3,9 +3,9 @@ import { PASSWORD } from './top-secret';
 import { dictionary } from './dictionary';
 import { findPassword } from './part2';
 
-jest.setTimeout(20000);
+jest.setTimeout(15000);
 
-describe.skip('Challenge 1, 20 Questions', () => {
+describe('Challenge 1, 20 Questions', () => {
   it('finds the password', async () => {
     const orderedGatekeeper = new OrderedGatekeeper(PASSWORD);
 
