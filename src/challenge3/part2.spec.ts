@@ -1,5 +1,5 @@
 import { maxMoney } from './part2';
-import { employees, months } from './clients';
+import { employees, months } from './companies';
 import { MAX_2 } from './top-secret';
 
 describe('Maximum Money part 2', () => {
