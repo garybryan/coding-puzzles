@@ -68,7 +68,7 @@ As one does at a party.
 
 # The challenge
 
-We are given _two inputs_:
+Given _two inputs_:
 
 - `guess(word: string): Promise<boolean>`
   A _function_ that takes a **word** and returns `true` or `false`.
@@ -163,7 +163,7 @@ Assume that friendships are _bidirectional_:
 
 # The challenge
 
-We are given _one input_:
+Given _one input_:
 
 - `getFriends(name: string): string[]`
   A _function_ that takes **a person's name**,  
@@ -175,15 +175,17 @@ Find the **minimum degree of separation**.
 
 ---
 
-# Wait... _what was that name again_?
+# Wait... what was that _name_ again?
 
 So we know the _degree of separation_.
 
-But we're bad at _remembering names_.
+But we're bad at **remembering names**.
 
-We've forgotten those mutual friends' ones already!
+We've _forgotten_ those mutual friends' ones already!
 
-Modify the solution to return _an array of names_ of the people on a shortest path, in order of connection.
+Modify the solution to return **an array of names** of the people on the shortest path, in order of connection.
+
+![bg right:30%](images/names.webp)
 
 ---
 
@@ -197,15 +199,24 @@ But it barely covers our _initial costs_.
 
 We'd better **become profitable** quickly!
 
+![bg left:30%](images/funding.jpeg)
+
 ---
 
 # Our mission
 
-IMAGE
+<style>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+![height:350px center](images/mission.png)
 
 How can we _make as much money as we can?_
 
-We need **a business plan**.
+We need a **business plan**.
 
 ---
 
@@ -215,30 +226,34 @@ We've done our _networking_.
 
 We've found **40 potential clients**.
 
-The money we can make from a client depends on its _number of employees_.
+The money we can make from a company depends on its _number of employees_.
+
+![bg left:45%](images/networking.jpeg)
 
 ---
 
 # A plan!
 
-Imagine that our _salesperson_ can acquire **one new client per month**.
+Imagine that our **salesperson** can acquire **one new client per month**.
 
 And we charge a one-off fee of **$500 per employee**.
 
-How much **money could we make** in **24 months**?
+How much can we make in **24 months**?
 
 Perhaps it pays to _be greedy_...
+
+![bg right:35%](images/salesman.webp)
 
 ---
 
 # Maximum money: Easy mode
 
-We are given _one input_:
+Given _one input_:
 
 - `employees: number[]`
-  An _array_ of numbers of employees per client.
+  An _array_ of numbers of employees per company.
 
-Give the **maximum amount we can make** in **24 months**.
+Give the **maximum amount** we can make in **24 months**.
 
 ---
 
@@ -246,22 +261,25 @@ Give the **maximum amount we can make** in **24 months**.
 
 But if life were that simple, _we'd all be millionaires_...
 
-In reality, some clients are _difficult_.
+In reality, some companies are _difficult_.
 
 Convincing them could take **more than a month**.
 
-Our busy salesperson can only negotiate with _one client at a time_.
+Our busy salesperson can only negotiate with **one company at a time**.
+
+![bg left:45%](images/negotiation.jpeg)
 
 ---
 
 # Maximum money: Normal mode
 
-We are given _two inputs_:
+Given _two inputs_:
 
 - `employees: number[]`
-  An _array_ of numbers of employees per client.
-- `times: number[]`
-  An _array_ of the numbers of months required to make a sale to each client. (_Whole numbers_)
+  An _array_ of numbers of employees per company.
+- `months: number[]`
+  An _array_ of the numbers of months required to make a sale to each company.  
+  (_Whole numbers_)
 
 Give the **maximum amount we can make** in **24 months**.
 
@@ -277,20 +295,23 @@ Market research shows we can charge **$50 per employee per month**.
 
 _How much could we make this way?_
 
+![bg right:45%](images/business-plan.jpeg)
+
 ---
 
 # Maximum money: (NP-)Hard mode
 
-We are given _two inputs_:
+Given _two inputs_:
 
 - `employees: number[]`
-  An _array_ of numbers of employees per client.
+  An _array_ of numbers of employees per company.
 - `months: number[]`
-  An _array_ of the numbers of months required to make a sale to each client. (_Whole numbers_)
+  An _array_ of the numbers of months required to make a sale to each company.  
+  (_Whole numbers_)
 
-Give the **maximum amount we can make** in **24 months** with **monthly subscriptions**.
+Give the **maximum amount** we can make in **24 months** with **monthly subscriptions**.
 
-Your code should _~~be efficient.~~ at least not take all day_.
+Your code should _~~be efficient~~ at least not take all day_.
 
 ---
 
@@ -300,7 +321,7 @@ Looking **promising**!
 
 But our salesperson is getting _overworked and stressed_.
 
-And only being able to negotiate with _one client at a time_ isn't ideal.
+And only being able to negotiate with _one company at a time_ isn't ideal.
 
 So let's use some of that funding to _hire more salespeople_!
 
@@ -312,9 +333,12 @@ Our original salesperson is happy being paid in _equity_...
 
 But candidates want a **salary**.
 
-Salaries are paid _monthly_.
+Salaries are paid **monthly**.
 
 As soon as we're earning enough to pay someone, we can hire them.
+
+Hiring and training a salesperson takes **two months**.  
+(but doesn't stop us from making sales).
 
 We can hire _as many as we need and can afford_.
 
@@ -322,26 +346,28 @@ We can hire _as many as we need and can afford_.
 
 # Expertise levels
 
-A salesperson with _expertise level_ $x$ can sell to a client in $x$ _fewer months_ than the expected number  
+A salesperson with _expertise level_ $x$ can acquire a client in $x$ _fewer months_ than the _expected number_
 (with a minimum time of _1 month_).
 
 But if we want the skills, we gotta **pay for them**!
 
 | Level  | Annual salary | Expertise level |
-| ------ | ------------- | --------------- |
-| Junior | $75,000       | 0               |
-| Mid    | $120,000      | 1               |
-| Senior | $240,000      | 3               |
+| ------ | ------------: | --------------: |
+| Junior |       $75,000 |               0 |
+| Mid    |      $120,000 |               1 |
+| Senior |      $240,000 |               3 |
 
 ---
 
 # Maximum money: Silly mode
 
-We are given _two inputs_, just like before:
+Given _two inputs_, just like before:
 
 - `employees: number[]`
-  An _array_ of numbers of employees per client.
-- `times: number[]`
-  An _array_ of the numbers of months required to make a sale to each client.
+  An _array_ of numbers of employees per company.
+- `months: number[]`
+  An _array_ of the numbers of months required to make a sale to each company.
 
-Give the **maximum amount we can make** in **24 months** with **monthly subscriptions** and the ability to **hire salespeople**?
+Give the **maximum amount** we can make in **24 months** with **monthly subscriptions** and the ability to **hire salespeople**?
+
+Your code should _~~be efficient~~ not kill your computer_.
