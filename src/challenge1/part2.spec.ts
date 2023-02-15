@@ -3,8 +3,10 @@ import { PASSWORD } from './top-secret';
 import { dictionary } from './dictionary';
 import { findPassword } from './part2';
 
-describe('Challenge 1, 20 Questions', () => {
-  it.skip('finds the password', async () => {
+jest.setTimeout(20000);
+
+describe.skip('Challenge 1, 20 Questions', () => {
+  it('finds the password', async () => {
     const orderedGatekeeper = new OrderedGatekeeper(PASSWORD);
 
     expect(
