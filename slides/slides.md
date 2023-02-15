@@ -319,11 +319,12 @@ Your code should _~~be efficient~~ at least not take all day_.
 
 Looking **promising**!
 
-But our salesperson is getting _overworked and stressed_.
+But our sales rep is getting _overworked and stressed_.
 
-And only being able to negotiate with _one company at a time_ isn't ideal.
+But if we hired **more salespeople**, we could acquire clients **more quickly**.
 
-So let's use some of that funding to _hire more salespeople_!
+Each **additional salesperson** allows us to acquire clients **1 month sooner**  
+(With a **minimum time** of one **month**)
 
 ---
 
@@ -331,31 +332,13 @@ So let's use some of that funding to _hire more salespeople_!
 
 Our original salesperson is happy being paid in _equity_...
 
-But candidates want a **salary**.
+But candidates want a **salary** of **$120k per year**.
 
 Salaries are paid **monthly**.
 
-As soon as we're earning enough to pay someone, we can hire them.
-
-Hiring and training a salesperson takes **two months**.  
-(but doesn't stop us from making sales).
+Hiring and training a salesperson takes **one month**, takes up **all current salepeople's** time, and costs a **$20k** one-off recruiter's fee.
 
 We can hire _as many as we need and can afford_.
-
----
-
-# Expertise levels
-
-A salesperson with _expertise level_ $x$ can acquire a client in $x$ _fewer months_ than the _expected number_
-(with a minimum time of _1 month_).
-
-But if we want the skills, we gotta **pay for them**!
-
-| Level  | Annual salary | Expertise level |
-| ------ | ------------: | --------------: |
-| Junior |       $75,000 |               0 |
-| Mid    |      $120,000 |               1 |
-| Senior |      $240,000 |               3 |
 
 ---
 
