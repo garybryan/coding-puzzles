@@ -28,23 +28,27 @@ But we need to **get funded** and **find some clients**.
 
 ---
 
-# Challenge 1: An exclusive party
+# An exclusive party
 
 We've got wind of an **exclusive IPO party** tonight.
 
-All of Silicon Valley's _VIP investors_ will be there.
+All of the Valley's _VIP investors_ will be there.
 
 We just need to **get in**...
 
+![bg right:50%](images/party.webp)
+
 ---
 
-# Part 1: The Password
+# The password
 
 The bouncer will only let us in if we know the **password**.
 
-But he's a nice guy really! He wants to _help a young business_.
+But he's a nice guy really! He wants to _help a new business_.
 
 So he gives us a _hint_ about the password...
+
+![bg left:30%](images/bouncer.png)
 
 ---
 
@@ -52,9 +56,11 @@ So he gives us a _hint_ about the password...
 
 > "Psst, I'll let you in on a little _secret_!"
 
-The password is a **word in the English language**!
+The password is an **English word**!
 
-Luckily, you're carrying a _dictionary_ around in your bag.
+Luckily, you're carrying a _dictionary_ around.
+
+![bg right:40%](images/dictionary.jpeg)
 
 As one does at a party.
 
@@ -75,13 +81,15 @@ We are given _two inputs_:
 
 # The bottleneck
 
-The bouncer may be a nice guy, but he has _limits_.
+The bouncer may be nice, but he has _limits_.
 
 > "_370,000 words?!_ We don't have all night!"
 
 A queue of partygoers is forming behind us.
 
 And they're getting **impatient**...
+
+![bg left:40%](images/queue.jpeg)
 
 ---
 
@@ -111,31 +119,37 @@ Find the password in **no more than 20 guesses**.
 
 ---
 
-# Challenge 2: The Social Network
+# The Social Network
 
-We've spotted famous venture capitalist **Monica Hall**!
+We've spotted a famous venture capitalist:
+
+**Monica Hall**!
 
 Let's _talk to her_.
 
 But Monica doesn't talk to _just anyone_.
 
-And besides, we're _socially-awkward software engineers_.
+And besides, we're _socially-awkward engineers_.
 
 We don't talk to **strangers**...
+
+![bg right:40%](images/monica.jpeg)
 
 ---
 
 # Degrees of separation
 
-They say everyone is connected by _at most 6 people_.
+They say everyone is linked by _at most 6 people_.
 
-So Monica must be a _friend of a friend of a friend of a friend_...
+Monica might be a _friend of a friend of a friend_...
 
-Could we introduce ourselves through **mutual friends**?
+Could we reach her via **mutual friends**?
+
+![bg left:40%](images/social-network.jpeg)
 
 ---
 
-# The challenge
+# An introduction
 
 Find the smallest _degree of separation_, via other guests, between you and Monica.
 
