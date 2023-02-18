@@ -1,5 +1,21 @@
 import { Queue } from '@datastructures-js/queue';
 
+/*
+  The order we take companies on now matters since the money we make from a company
+  depends on the point of time, so the previous solution no longer works as it was
+  based on constant values.
+
+  This is a Breadth First Search solution based on exploring the whole space of
+  possible states (total income so far, monthly income, months remaining, and
+  which companies have been taken on so far).
+
+  It's (maybe) correct, but it's very slow and runs out of memory because there
+  are so many possible states: O(N!).
+
+  A depth-first version might work better, as the tree will be much wider than
+  deeper, but would still be very slow.
+ */
+
 const MONTHLY_FEE = 50;
 
 type Companies = boolean[];

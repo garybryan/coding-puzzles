@@ -1,8 +1,12 @@
 const FEE = 500;
 
 export function maxMoney(employees: number[]): number {
-  // JS sorts as strings, not numbers, unless told otherwise, so a comparison function is needed.
+  // Just take the 24 largest companies, get the total employees, and multiply
+  // by the fee.
+  // JS sorts as strings, not numbers, unless told otherwise, so a comparison
+  // function is needed.
   // `y - x` makes it a descending sort.
+
   const result =
     employees
       .sort((x, y) => y - x)

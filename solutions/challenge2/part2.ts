@@ -1,5 +1,10 @@
 import { Queue } from '@datastructures-js/queue';
 
+// Instead of tracking degrees, track who you met each person through.
+// This allows you to work backwards from Monica to get the names. `prev` could
+// replace `seen`, but would require setting a Me entry to a sentinel value and
+// typing for that.
+
 function tracePath(name: string, prev: Map<string, string>): string[] {
   const pathBack = [];
   let curName: string | undefined = name;
@@ -10,6 +15,7 @@ function tracePath(name: string, prev: Map<string, string>): string[] {
   }
 
   const path = pathBack.reverse();
+
   console.log('Path from me to Monica:', path.join(', '));
   return path;
 }

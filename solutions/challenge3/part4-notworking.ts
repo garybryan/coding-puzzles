@@ -1,6 +1,13 @@
 import { Queue } from '@datastructures-js/queue';
 
-// TODO not working: never hires salespeople and just gets the same result as part 3 but much more slowly.
+// TODO not working: never hires salespeople and just gets the same result as
+// part 3 but much more slowly.
+
+/*
+  Modification of the branch-and-bound solution to part 3 to also consider
+  taking on salespeople. This is just done by adding a state for taking one on
+  when getting all possible next states.
+ */
 
 const MONTHLY_FEE = 50;
 const RECRUITER_FEE = 20_000;

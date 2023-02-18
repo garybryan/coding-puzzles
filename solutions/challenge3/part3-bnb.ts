@@ -1,5 +1,25 @@
 import { Queue } from '@datastructures-js/queue';
 
+/*
+  Branch and Bound optimisation to the previous BFS solution.
+
+  At each state, a lower bound on the solution from that state is found.
+  This is just the amount that would be made by not taking on any more clients
+  in the remaining months, so is the current total plus the monthly income
+  multiplied by the remaining months. This is updated during the search, so
+  at the end will represent the best solution.
+
+  This is used to prune the tree: if the lower bound for a current state is
+  less than the best lower bound so far, there's no point in continuing to
+  explore that branch, so it can be pruned.
+
+  I'm not sure if this solution is correct, as trying to optimise it further
+  with a best-first search (to reach solutions and produce a higher bound more
+  quickly, allowing faster pruning) produced a different result. I need to
+  understand whether there's an error in the logic or just in the best-first
+  solution.
+ */
+
 const MONTHLY_FEE = 50;
 
 type Companies = boolean[];
