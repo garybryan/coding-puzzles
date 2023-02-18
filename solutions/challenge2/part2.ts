@@ -1,4 +1,4 @@
-import { Queue } from "@datastructures-js/queue";
+import { Queue } from '@datastructures-js/queue';
 
 function tracePath(name: string, prev: Map<string, string>): string[] {
   const pathBack = [];
@@ -10,23 +10,23 @@ function tracePath(name: string, prev: Map<string, string>): string[] {
   }
 
   const path = pathBack.reverse();
-  console.log("Path from me to Monica:", path.join(", "));
+  console.log('Path from me to Monica:', path.join(', '));
   return path;
 }
 
 export function degreesOfSeparationNames(
-  getFriends: (name: string) => string[]
+  getFriends: (name: string) => string[],
 ): string[] {
   const toMeet = new Queue<string>();
   const seen = new Set<string>();
   const prev = new Map<string, string>();
 
-  toMeet.push("Me");
+  toMeet.push('Me');
 
   while (!toMeet.isEmpty()) {
     const name = toMeet.pop();
 
-    if (name === "Monica Hall") {
+    if (name === 'Monica Hall') {
       return tracePath(name, prev);
     }
 

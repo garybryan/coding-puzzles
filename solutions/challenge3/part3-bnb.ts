@@ -1,4 +1,4 @@
-import { Queue } from "@datastructures-js/queue";
+import { Queue } from '@datastructures-js/queue';
 
 const MONTHLY_FEE = 50;
 
@@ -37,7 +37,7 @@ function getLowerBound({
 export function maxMoney(employees: number[], months: number[]): number {
   function getNextStateForCompany(
     { monthsRemaining, monthlyIncome, totalIncome, companies }: State,
-    companyIndex: number
+    companyIndex: number,
   ): State {
     const companyEmployees = employees[companyIndex];
     const companyMonths = months[companyIndex];
@@ -56,11 +56,11 @@ export function maxMoney(employees: number[], months: number[]): number {
     return companies
       .map(
         (isAcquired, companyIndex) =>
-          [companyIndex, isAcquired] as [number, boolean]
+          [companyIndex, isAcquired] as [number, boolean],
       )
       .filter(
         ([companyIndex, isAcquired]) =>
-          !isAcquired && months[companyIndex] < monthsRemaining
+          !isAcquired && months[companyIndex] < monthsRemaining,
       )
       .map(([companyIndex]) => getNextStateForCompany(state, companyIndex));
   }
@@ -86,8 +86,8 @@ export function maxMoney(employees: number[], months: number[]): number {
   }
 
   console.log(
-    "Max money with monthly subscriptions:",
-    lowerBound.toLocaleString()
+    'Max money with monthly subscriptions:',
+    lowerBound.toLocaleString(),
   );
   return lowerBound;
 }

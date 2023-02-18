@@ -9,6 +9,6 @@ export function maxMoney(employees: number[]): number {
       .slice(0, 24)
       .reduce((total, companyEmployees) => total + companyEmployees) * FEE;
 
-  console.log("Max money for 24 biggest companies:", result.toLocaleString());
+  console.log('Max money for 24 biggest companies:', result.toLocaleString());
   return result;
 }
